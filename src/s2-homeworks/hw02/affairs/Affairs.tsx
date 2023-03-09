@@ -21,7 +21,7 @@ function Affairs(props: AffairsPropsType) {
         props.setFilter("middle")
     }
     const setLow = () => {
-        props.setFilter("high")
+        props.setFilter("low")
     }
 
     const cnAll = s.button + ' ' + s.all + (props.filter === 'all' ? ' ' + s.active : '')
