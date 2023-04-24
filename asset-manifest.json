@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/hwauto/static/css/main.ea78ad34.css",
-    "main.js": "/hwauto/static/js/main.067477b7.js",
+    "main.css": "/hwauto/static/css/main.2ee3d292.css",
+    "main.js": "/hwauto/static/js/main.b64f1667.js",
     "static/js/787.66cb4309.chunk.js": "/hwauto/static/js/787.66cb4309.chunk.js",
     "static/media/avatar.png": "/hwauto/static/media/avatar.d947cb9d0d13765666b6.png",
+    "static/media/checked.svg": "/hwauto/static/media/checked.b75ca55e8759862b4083.svg",
     "index.html": "/hwauto/index.html",
-    "main.ea78ad34.css.map": "/hwauto/static/css/main.ea78ad34.css.map",
-    "main.067477b7.js.map": "/hwauto/static/js/main.067477b7.js.map",
+    "main.2ee3d292.css.map": "/hwauto/static/css/main.2ee3d292.css.map",
+    "main.b64f1667.js.map": "/hwauto/static/js/main.b64f1667.js.map",
     "787.66cb4309.chunk.js.map": "/hwauto/static/js/787.66cb4309.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ea78ad34.css",
-    "static/js/main.067477b7.js"
+    "static/css/main.2ee3d292.css",
+    "static/js/main.b64f1667.js"
   ]
 }
