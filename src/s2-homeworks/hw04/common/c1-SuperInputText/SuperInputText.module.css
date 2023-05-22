@@ -1,4 +1,6 @@
 .input:focus {
+    border: 1px solid #D1D1D1;
+    border-radius: 5px;
 }
 
 .input {
@@ -6,6 +8,9 @@
     height: 36px;
     border: 1px solid #D1D1D1;
     border-radius: 5px;
+}
+.input:active, :hover, :focus {
+    outline: 0;
 }
 
 .inputWrapper {
@@ -16,7 +21,11 @@
 }
 
 .superInput {
+    border: 1px solid red;
+    border-radius: 5px;
 }
+
+
 
 .errorInput {
     border: 1px solid #CC1439;

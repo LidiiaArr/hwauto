@@ -14,12 +14,12 @@ import s from './HW6.module.css'
 const HW6 = () => {
     const [value, setValue] = useState<string>('')
 
-    const save = () => {
+    const save = () => { //функция сохранения в local storage
         saveState<string>('hw6-editable-span-value', value)
     }
-    const restore = () => {
+    const restore = () => { //функция достования из local storage
         // делают студенты
-
+        setValue(restoreState('hw6-editable-span-value', ""))
     }
 
     return (
