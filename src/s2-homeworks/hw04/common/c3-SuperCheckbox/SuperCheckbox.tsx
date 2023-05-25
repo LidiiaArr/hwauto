@@ -1,18 +1,23 @@
 import React, {
-    ChangeEvent,
+    ChangeEvent, ComponentProps,
     DetailedHTMLProps,
     InputHTMLAttributes,
 } from 'react'
 import s from './SuperCheckbox.module.css'
 
 // тип пропсов обычного инпута
-type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>,
-    HTMLInputElement>
+// type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>,
+//     HTMLInputElement>
+//
+// type SuperCheckboxPropsType = Omit<DefaultInputPropsType, 'type'> & {
+//     onChangeChecked?: (checked: boolean) => void
+//     spanClassName?: string
+// }
 
-type SuperCheckboxPropsType = Omit<DefaultInputPropsType, 'type'> & {
+type SuperCheckboxPropsType = {
     onChangeChecked?: (checked: boolean) => void
     spanClassName?: string
-}
+} & ComponentProps<'input'>
 
 const SuperCheckbox: React.FC<SuperCheckboxPropsType> = (
     {
@@ -28,8 +33,8 @@ const SuperCheckbox: React.FC<SuperCheckboxPropsType> = (
 ) => {
     const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
         // задачка на написание онченджа
-        onChange &&  onChange(e)
-        onChangeChecked && onChangeChecked(e.currentTarget.checked)
+        onChange && onChange(e)
+        onChangeChecked && onChangeChecked(e.currentTarget.checked) // true | false
 
     }
 //onChange={(e) => setChecked(e.currentTarget.checked)

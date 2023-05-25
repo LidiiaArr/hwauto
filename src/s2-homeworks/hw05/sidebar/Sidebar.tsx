@@ -10,7 +10,7 @@ type PropsType = {
 }
 
 export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
-console.log(open)
+
     const sidebarClass = s.sidebar
         + (open ? ' ' + s.open : '')
     return (
