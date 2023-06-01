@@ -1,17 +1,26 @@
 .item {
+    /*background-color: #cc0000;*/
+    border-bottom: 1px solid #E5E5E5;
 }
-
+.item:after {
+    content: '';
+    background-color: black;
+    height: 1px;
+    display: block;
+}
 .item:last-of-type {
 }
 
 .users {
+    border-collapse: collapse;
 }
+/*убрать пробел из таблицы*/
 
 .buttonsContainer {
     display: flex;
     margin-left: 150px;
     gap: 15px;
-
+    margin-bottom: 15px;
 }
 
 .container {
@@ -33,7 +42,17 @@
 }
 
 .nameCol {
+    width: 300px;
+
+    color: #000000;
+    padding: 10px;
+
 }
 
+
 .ageCol {
+    width: 300px;
+    font-weight: 600;
+    padding: 10px;
+
 }
