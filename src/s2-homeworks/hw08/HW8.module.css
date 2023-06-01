@@ -8,12 +8,28 @@
 }
 
 .buttonsContainer {
+    display: flex;
+    margin-left: 150px;
+    gap: 15px;
+
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 606px;
+
 }
 
 .thead {
+    background: #E5E5E5;
+    width: 606px;
+    height: 36px;
+    font-family: 'Roboto', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
 }
 
 .nameCol {
