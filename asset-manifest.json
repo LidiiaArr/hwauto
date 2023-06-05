@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/hwauto/static/css/main.d79d15b0.css",
-    "main.js": "/hwauto/static/js/main.3e7754af.js",
+    "main.js": "/hwauto/static/js/main.909066bf.js",
     "static/js/787.66cb4309.chunk.js": "/hwauto/static/js/787.66cb4309.chunk.js",
     "static/media/avatar.png": "/hwauto/static/media/avatar.d947cb9d0d13765666b6.png",
     "static/media/404.svg": "/hwauto/static/media/404.9ec31c0ba8d95b0480272e46af98c955.svg",
@@ -11,11 +11,11 @@
     "index.html": "/hwauto/index.html",
     "static/media/burger.svg": "/hwauto/static/media/burger.700e416f7bfe3697f96b36c778d25355.svg",
     "main.d79d15b0.css.map": "/hwauto/static/css/main.d79d15b0.css.map",
-    "main.3e7754af.js.map": "/hwauto/static/js/main.3e7754af.js.map",
+    "main.909066bf.js.map": "/hwauto/static/js/main.909066bf.js.map",
     "787.66cb4309.chunk.js.map": "/hwauto/static/js/787.66cb4309.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d79d15b0.css",
-    "static/js/main.3e7754af.js"
+    "static/js/main.909066bf.js"
   ]
 }
