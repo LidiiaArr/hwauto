@@ -10,6 +10,7 @@ import SuperRange from './common/c7-SuperRange/SuperRange'
 * 3 - сделать стили в соответствии с дизайном
 * */
 
+
 function HW11() {
     // for autotests // не менять // можно подсунуть в локалСторэдж нужные числа, чтоб увидеть как они отображаются
     const [value1, setValue1] = useState(restoreState<number>('hw11-value1', 0))
