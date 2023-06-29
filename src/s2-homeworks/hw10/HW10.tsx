@@ -18,19 +18,16 @@ const HW10 = () => {
     const dispatch = useDispatch()
     const isLoading = useSelector<AppStoreType>(state => state.loading.isLoading)
 
-    console.log(useSelector<AppStoreType>(state=> state.loading.isLoading) )
-    //const isLoading = false
+
 
     const setLoading = () => { // пишет студент // показать крутилку на 1,5 секунд
         // dispatch
         const action = loadingAC(true)
         dispatch(action)
-        console.log('крутилка вкл')
         // setTimeout
         setTimeout(()=>{
             const action = loadingAC(false)
             dispatch(action)
-            console.log('крутилка off')
 
         }, 1500)
 

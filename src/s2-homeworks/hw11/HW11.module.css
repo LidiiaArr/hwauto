@@ -1,8 +1,18 @@
 .container {
+    width: 400px;
 }
 
 .wrapper {
+display: flex;
 }
 
 .number {
+    color: #000;
+    font-size: 16px;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 20px;
 }
+
