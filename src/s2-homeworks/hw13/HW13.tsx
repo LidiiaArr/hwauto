@@ -38,7 +38,7 @@ const HW13 = () => {
             .then((res) => {
                 setCode('Код 200!')
                 setImage(success200)
-                setText('...все ок) Код 200 - обычно означает что скорее всего все ок)')
+                setText('...все ок)')
                 setInfo('')
                 // дописать
 
@@ -47,20 +47,18 @@ const HW13 = () => {
                 if(e.response.status === 400) {
                     setCode('Ошибка 400!')
                     setImage(error400)
-                    setText('Ты не отправил success в body вообще! ошибка 400 - ' +
-                        'обычно означает что скорее всего фронт отправил что-то не то на бэк!')
+                    setText('Ты не отправил success в body вообще!')
                     setInfo('')
                 } else if(e.response.status === 500) {
                     setCode('Ошибка 500!')
                     setImage(error500)
-                    setText('эмитация ошибки на сервере\n' +
-                        'ошибка 500 - обычно означает что что-то сломалось на сервере, например база данных)')
+                    setText('эмитация ошибки на сервере')
                     setInfo('')
                 } else if(e.message === "Network Error"){
                     setCode('Error')
                     setImage(errorUnknown)
                     setText('Network Error AxiosError')
-                    setInfo('')
+                    setInfo('Error')
                 }
             })
     }
