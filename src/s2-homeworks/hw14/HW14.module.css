@@ -3,5 +3,10 @@
 }
 
 .loading {
-
+    color: #4D4D4D;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
 }
