@@ -30,8 +30,7 @@ const HW14 = () => {
     const [searchParams, setSearchParams] = useSearchParams()
     //useSearchParams хук для извлечения значения параметров из строки запроса
     const [techs, setTechs] = useState<string[]>([])
-//тут массив технологий
-    //console.log(Object.fromEntries(searchParams), 'searchParams')
+    //тут массив технологий
 
     const sendQuery = (value: string) => {
         setLoading(true)
@@ -41,8 +40,8 @@ const HW14 = () => {
                 // делает студент
 
                 // сохранить пришедшие данные
-                              setTechs(res.data.techs)
-                //
+                setTechs(res.data.techs)
+
                 setLoading(false)
             })
     }
@@ -54,16 +53,16 @@ const HW14 = () => {
         // добавить/заменить значение в квери урла
         // setSearchParams(
 
-        setSearchParams({keyword: value} )
+        setSearchParams({find: value} )
     }
 
     useEffect(() => {
         const params = Object.fromEntries(searchParams)
         //преобразуем массив/Map состоящий из двух элементов в объект с ключом и значением
-        //console.log(params , "paramsUseEffect")
+        //изначально тут ничего нет
         sendQuery(params.find || '')
         setFind(params.find || '')
-    }, [])
+    }, [])//при первом рендеринге
 
     const mappedTechs = techs.map(t => (
         <div key={t} id={'hw14-tech-' + t} className={s.tech}>
