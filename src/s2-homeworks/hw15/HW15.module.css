@@ -8,14 +8,28 @@
 
 .techHeader {
     width: 50vw;
+    background: #E5E5E5;
+    width: 606px;
+    height: 36px;
+    font-family: 'Roboto', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
 }
 
 .developerHeader {
-
+    background: #E5E5E5;
+    width: 606px;
+    height: 36px;
+    font-family: 'Roboto', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
 }
 
 .row {
     display: flex;
+    border-bottom: 1px solid #E5E5E5;
 }
 
 .rowHeader {
@@ -24,4 +38,8 @@
 
 .loading {
 
+}
+
+.container {
+    padding-bottom: 30px;
 }

@@ -5,6 +5,7 @@ import axios from 'axios'
 import SuperPagination from './common/c9-SuperPagination/SuperPagination'
 import {useSearchParams} from 'react-router-dom'
 import SuperSort from './common/c10-SuperSort/SuperSort'
+import {Loader} from "../hw10/Loader";
 
 /*
 * 1 - дописать SuperPagination
@@ -30,7 +31,7 @@ type ParamsType = {
 const getTechs = (params: ParamsType) => {
     return axios
         .get<{ techs: TechType[], totalCount: number }>(
-            'https://incubator-personal-page-back.herokuapp.com/api/3.0/homework/test3',
+            'https://samurai.it-incubator.io/api/3.0/homework/test3',
             {params}
         )
         .catch((e) => {
@@ -40,55 +41,76 @@ const getTechs = (params: ParamsType) => {
 
 const HW15 = () => {
     const [sort, setSort] = useState('')
+    //страница с которой начинается
     const [page, setPage] = useState(1)
+    //количество строк на странице
     const [count, setCount] = useState(4)
+    //наличие крутилки
     const [idLoading, setLoading] = useState(false)
     const [totalCount, setTotalCount] = useState(100)
-    const [searchParams, setSearchParams] = useSearchParams()
+    //useSearchParams хук для извлечения значения параметров из строки запроса
+    //хук возвращает две сущности объект URLSearchParams и метод обновления
+    const [searchParams, setSearchParams ] = useSearchParams()
     const [techs, setTechs] = useState<TechType[]>([])
-
+// console.log()
+// console.log(searchParams)
+    //делаем запрос на сервер и сохраняем данные
     const sendQuery = (params: any) => {
+        //включаем крутилку
+        //console.log(params)
         setLoading(true)
         getTechs(params)
-            .then((res) => {
+            .then((res:any) => {
                 // делает студент
-
                 // сохранить пришедшие данные
-
-                //
+                setTechs(res.data.techs)
+                //console.log(res)
+                setTotalCount(res.data.totalCount)
+                //выключаем крутилку
+                setLoading(false)
             })
     }
 
+    //принимает первым аргументом номер страницы вторым аргументом новое количество записей
     const onChangePagination = (newPage: number, newCount: number) => {
         // делает студент
 
         // setPage(
+        setPage(newPage)
         // setCount(
-
+        setCount(newCount)
         // sendQuery(
+        sendQuery({page: newPage, count: newCount})
         // setSearchParams(
-
-        //
+        setSearchParams({ page: String(newPage), count: String(newCount)})
+        //setSearchParams({ page: String(newPage), count: newCount})
     }
 
     const onChangeSort = (newSort: string) => {
         // делает студент
-
+console.log(newSort)
         // setSort(
+        setSort(newSort)
         // setPage(1) // при сортировке сбрасывать на 1 страницу
-
+        setPage(1)
         // sendQuery(
+        sendQuery({ sort: newSort, page: String(1), count: String(count)})
+        //        sendQuery({ sort: newSort, page: String(1), count: String(count)})
         // setSearchParams(
-
-        //
+        setSearchParams({ sort: newSort, page: String(1), count: String(count)})
+        //        setSearchParams({ sort: newSort, page: String(1), count: String(count)})
     }
 
     useEffect(() => {
+        //преобразуем массив/Map состоящий из двух элементов в объект с ключом и значением
         const params = Object.fromEntries(searchParams)
+        //console.log(params)
+        //делаем запрос на сервер
         sendQuery({page: params.page, count: params.count})
         setPage(+params.page || 1)
         setCount(+params.count || 4)
     }, [])
+    //сработает при первом вмонтировании
 
     const mappedTechs = techs.map(t => (
         <div key={t.id} className={s.row}>
@@ -103,12 +125,12 @@ const HW15 = () => {
     ))
 
     return (
-        <div id={'hw15'}>
+        <div id={'hw15'} className={s.container}>
             <div className={s2.hwTitle}>Homework #15</div>
 
             <div className={s2.hw}>
-                {idLoading && <div id={'hw15-loading'} className={s.loading}>Loading...</div>}
-
+                {/*{idLoading && <div id={'hw15-loading'} className={s.loading}>Loading...</div>}*/}
+                {idLoading && <Loader/>}
                 <SuperPagination
                     page={page}
                     itemsCountForPage={count}
