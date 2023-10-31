@@ -30,6 +30,8 @@
 .row {
     display: flex;
     border-bottom: 1px solid #E5E5E5;
+    width: 1212px;
+
 }
 
 .rowHeader {
