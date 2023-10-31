@@ -94,10 +94,10 @@ console.log(newSort)
         // setPage(1) // при сортировке сбрасывать на 1 страницу
         setPage(1)
         // sendQuery(
-        sendQuery({ sort: newSort})
+        sendQuery({ sort: newSort, page: String(1), count: String(count)})
         //        sendQuery({ sort: newSort, page: String(1), count: String(count)})
         // setSearchParams(
-        setSearchParams({ sort: newSort})
+        setSearchParams({ sort: newSort, page: String(1), count: String(count)})
         //        setSearchParams({ sort: newSort, page: String(1), count: String(count)})
     }
 
